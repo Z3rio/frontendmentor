@@ -4,7 +4,7 @@
   <div class="nft-card">
     <div class="image">
       <div class="hover">
-        <img src="../assets/icon-view.svg" />
+        <img src="../assets/icon-view.svg" alt="View icon" />
       </div>
     </div>
     <h1 class="header">Equilibrium #3429</h1>
@@ -14,11 +14,11 @@
 
     <div class="footer">
       <div class="price">
-        <img src="../assets/icon-ethereum.svg" />
+        <img src="../assets/icon-ethereum.svg" alt="Ethereum Icon" />
         <span class="price">0.041 ETH</span>
       </div>
       <div class="time">
-        <img src="../assets/icon-clock.svg" />
+        <img src="../assets/icon-clock.svg" alt="Clock icon" />
         <span class="time">3 days left</span>
       </div>
     </div>
@@ -26,7 +26,7 @@
     <div class="divider"></div>
 
     <div class="author">
-      <img src="../assets/image-avatar.png" />
+      <img src="../assets/image-avatar.png" alt="Author avatar" />
       <h1>Creation of <span>Jules Wyvern</span></h1>
     </div>
   </div>
