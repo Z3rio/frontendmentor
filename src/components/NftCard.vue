@@ -143,6 +143,7 @@
 .author {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   width: calc(100% - 48px);
   margin: 16px 0 0 24px;
@@ -161,7 +162,7 @@
 }
 
 .author h1 {
-  margin-left: 16px;
+  margin: 0 0 0 16px;
 
   font-family: "Outfit";
   font-style: normal;
