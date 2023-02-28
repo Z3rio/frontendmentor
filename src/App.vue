@@ -1,30 +1,40 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Order from "./components/Order.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <svg
+    width="1440"
+    height="428"
+    viewBox="0 0 1440 428"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="spline"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M0 349.974C0 349.974 327.837 524.026 724.475 349.974C1121.11 175.921 1440 349.974 1440 349.974V0H0V349.974Z"
+      fill="#D6E1FF"
+    />
+  </svg>
+
+  <Order />
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.spline {
+  display: block;
+
+  width: 100vw;
+  min-width: 639px;
+  height: auto;
+
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+
+  z-index: -1;
 }
 </style>
