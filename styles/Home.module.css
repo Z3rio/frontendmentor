@@ -25,9 +25,17 @@
   display: flex;
 }
 
+.numberHolder {
+  padding: 30px 24px;
+
+  width: calc(100% - 48px)
+}
+
 .numberText {
   font-size: 56px;
   line-height: 52px;
   text-align: right;
   letter-spacing: -0.933333px;
+
+  overflow-x: scroll;
 }

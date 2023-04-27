@@ -73,11 +73,15 @@
 
 @media screen and (max-width: 500px) {
     .main {
-        row-gap: 9px;
+        row-gap: calc(32px / 3);
+
+        padding: 24px;
+        
+        width: calc(100% - 48px);
     }
 
     .button {
-        width: calc(25% - 9px);
+        width: calc(25% - 8px);
 
         font-size: 32px;
     }
