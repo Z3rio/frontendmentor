@@ -1,10 +1,14 @@
+import { themeNames } from "@/utils/data";
 import styles from "@styles/Top.module.css"
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-export default function Top() {
-    const [theme, setTheme] = useState<number>(0);
+interface Props {
+    theme: number;
+    setTheme: Dispatch<SetStateAction<number>>;
+}
 
-    return <div className={styles.top}>
+export default function Top({theme, setTheme}: Props) {
+    return <div className={`${styles.top} ${styles[themeNames[theme]]}`}>
         <span className={styles.calc}>calc</span>
         <span className={styles.theme}>theme</span>
 

@@ -53,12 +53,23 @@
     height: 16px;
     width: calc(100% - 10px);
 
-    background: #242D44;
     border-radius: 13px;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.blue .selector {
+    background: #242D44;
+}
+
+.white .selector {
+    background: #D2CDCD;
+}
+
+.purple .selector {
+    background: #1E0936;
 }
 
 .circle {
@@ -70,6 +81,14 @@
     cursor: pointer;
 }
 
-.circle.active {
+.blue .circle.active {
     background: #F96B5B;
+}
+
+.white .circle.active {
+    background: #C85402;
+}
+
+.purple .circle.active {
+    background: #00DED0;
 }

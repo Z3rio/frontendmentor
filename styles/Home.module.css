@@ -1,3 +1,28 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.blue {
+  background: #3A4663;
+  color: #fff;
+}
+
+.white {
+  background: #E6E6E6;
+  color: #36362C;
+}
+
+.purple {
+  background: #17062A;
+  color: #FFE53D;
+}
+
 .inner {
   max-width: 540px;
   max-height: 706px;
@@ -19,7 +44,6 @@
   padding: 40px 30px;
   margin-top: 32px;
 
-  background: #181F33;
   border-radius: 10px;
 
   display: flex;
@@ -38,4 +62,16 @@
   letter-spacing: -0.933333px;
 
   overflow-x: scroll;
+}
+
+.blue .numberHolder {
+  background: #181F33;
+}
+
+.white .numberHolder {
+  background: #EEEEEE;
+}
+
+.purple .numberHolder {
+  background: #1E0936;
 }

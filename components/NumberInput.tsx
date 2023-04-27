@@ -1,4 +1,4 @@
-import { Buttons } from '@/utils/data';
+import { Buttons, themeNames } from '@/utils/data';
 import { Button } from '@/utils/structs';
 import styles from '@styles/NumberInput.module.css'
 import { Dispatch, SetStateAction } from 'react';
@@ -10,9 +10,10 @@ interface Props {
     setCachedNumber: Dispatch<SetStateAction<string>>;
     method: undefined | "+" | "-" | "/" | "x";
     setMethod: Dispatch<SetStateAction<undefined | "+" | "-" | "/" | "x">>;
+    theme: number;
 }
 
-export default function NumberInput({number, setNumber, cachedNumber, setCachedNumber, method, setMethod}: Props) {
+export default function NumberInput({number, setNumber, cachedNumber, setCachedNumber, method, setMethod, theme}: Props) {
     function getClasses(classes?: string | string[]) {
         if (classes !== undefined) {
             if (typeof classes == "string") {
@@ -35,9 +36,9 @@ export default function NumberInput({number, setNumber, cachedNumber, setCachedN
         }
     }
 
-    return <div className={styles.main}>
+    return <div className={`${styles.main} ${styles[themeNames[theme]]}`}>
         {Buttons.map((btn: Button, idx: number) => {
-            return <div 
+            return <div
                 key={idx} 
                 onClick={() => {
                     btn.handler(number, setNumber, cachedNumber, setCachedNumber, method, setMethod);

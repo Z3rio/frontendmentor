@@ -97,7 +97,9 @@ export const Buttons: Button[] = [
     {
         text: "0",
         handler: (curr, setCurr) => {
-            setCurr(curr + "0")
+            if (curr !== "0") {
+                setCurr(curr + "0")
+            }
         }
     },
     {
@@ -158,3 +160,5 @@ export const Buttons: Button[] = [
         customClass: ["red", "small", "half"]
     },
 ]
+
+export const themeNames: string[] = ["blue", "white", "purple"];

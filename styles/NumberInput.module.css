@@ -5,7 +5,6 @@
 
     padding: 32px;
 
-    background: #242D44;
     border-radius: 10px;
 
     display: flex;
@@ -17,6 +16,18 @@
     row-gap: 24px;
 }
 
+.blue.main {
+    background: #242D44;
+}
+
+.white.main {
+    background: #D2CDCD;
+}
+
+.purple.main {
+    background: #1E0936;
+}
+
 .button {
     width: calc(25% - 18px);
     height: 64px;
@@ -25,19 +36,40 @@
     align-items: center;
     justify-content: center;
 
-    background: #EAE3DC;
-    box-shadow: inset 0px -4px 0px #B3A497;
     border-radius: 10px;
 
     font-size: 40px;
     line-height: 37px;
     letter-spacing: -0.666667px;
-    color: #434A59;
 
     cursor: pointer;
+}
+
+.blue .button {
+    background: #EAE3DC;
+    box-shadow: inset 0px -4px 0px #B3A497;
+    color: #434A59;
 
     --hover-box-shadow: #B3A497;
     --hover-background: #FFFFFE;
+}
+
+.white .button {
+    background: #E5E4E1;
+    box-shadow: inset 0px -4px 0px #A79E91;
+    color: #36362C;
+
+    --hover-box-shadow: #B3A497;
+    --hover-background: #FFFFFE;
+}
+
+.purple .button {
+    background: #331C4D;
+    box-shadow: inset 0px -4px 0px #881C9E;
+    color: #FFE53D;
+
+    --hover-background: #56077C;
+    --hover-box-shadow: #BE15F4;
 }
 
 .button.half {
@@ -48,7 +80,7 @@
     font-size: 28px;
 }
 
-.button.red {
+.blue .button.red {
     background: #D03F2F;
     box-shadow: inset 0px -4px 0px #93261A;
     color: #FFFFFF;
@@ -57,7 +89,25 @@
     --hover-box-shadow: #93261A;
 }
 
-.button.action {
+.white .button.red {
+    background: #C85402;
+    box-shadow: inset 0px -4px 0px #873901;
+    color: #FFFFFF;
+
+    --hover-background: #FF8A38;
+    --hover-box-shadow: #873901;
+}
+
+.purple .button.red {
+    background: #00DED0;
+    box-shadow: inset 0px -4px 0px #6CF9F1;
+    color: #FFFFFF;
+
+    --hover-background: #93FFF8;
+    --hover-box-shadow: #6CF9F1;
+}
+
+.blue .button.action {
     background: #647198;
     box-shadow: inset 0px -4px 0px #414E73;
     color: #FFFFFF;
@@ -66,9 +116,27 @@
     --hover-box-shadow: inset 0px -4px 0px #414E73;
 }
 
+.white .button.action {
+    background: #378187;
+    box-shadow: inset 0px -4px 0px #1B6066;
+    color: #FFFFFF;
+
+    --hover-background: #62B5BC;
+    --hover-box-shadow: #1B6066;
+}
+
+.purple .button.action {
+    background: #56077C;
+    box-shadow: inset 0px -4px 0px #BE15F4;
+    color: #FFFFFF;
+
+    --hover-background: #8631AF;
+    --hover-box-shadow: #BE15F4;
+}
+
 .button:hover {
-    background: var(--hover-background);
-    box-shadow: inset 0px -4px 0px var(--hover-box-shadow);
+    background: var(--hover-background)!important;
+    box-shadow: inset 0px -4px 0px var(--hover-box-shadow)!important;
 }
 
 @media screen and (max-width: 500px) {
