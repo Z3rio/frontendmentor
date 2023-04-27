@@ -25,7 +25,8 @@ export default function Top() {
 
             <div className={styles.selector}>
                 {[...Array(3)].map((x, i) =>
-                    <div 
+                    <div
+                        key={i}
                         className={`${styles.circle} ${i == theme ? " " + styles.active : ""}`}
                         onClick={() => {
                             setTheme(i);
