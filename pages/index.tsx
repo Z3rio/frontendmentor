@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { League_Spartan } from 'next/font/google'
 import styles from '@styles/Home.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { themeNames } from '@/utils/data'
 
 import Top from '@components/Top'
@@ -16,6 +16,16 @@ export default function Home() {
   const [cachedNumber, setCachedNumber] = useState<string>("");
   const [method, setMethod] = useState<undefined | "+" | "-" | "/" | "x">(undefined);
   const [theme, setTheme] = useState<number>(0);
+
+  useEffect(() => {
+    const storedVal: string | null = localStorage.getItem("theme");
+
+    if (storedVal == null) {
+      localStorage.setItem("theme", "0")
+    } else {
+      setTheme(Number(storedVal));
+    }
+  }, [])
 
   return (
     <>

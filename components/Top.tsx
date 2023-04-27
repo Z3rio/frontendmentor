@@ -18,8 +18,9 @@ export default function Top({theme, setTheme}: Props) {
                     <span 
                         key={i} 
                         className={styles.selectorText} 
-                            onClick={() => {
+                        onClick={() => {
                             setTheme(i);
+                            localStorage.setItem("theme", i.toString());
                         }}
                     >
                         {i + 1}
@@ -34,6 +35,7 @@ export default function Top({theme, setTheme}: Props) {
                         className={`${styles.circle} ${i == theme ? " " + styles.active : ""}`}
                         onClick={() => {
                             setTheme(i);
+                            localStorage.setItem("theme", i.toString());
                         }}
                     />
                 )}
