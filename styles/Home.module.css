@@ -9,3 +9,25 @@
 
   overflow: hidden;
 }
+
+.numberHolder {
+  display: flex;
+  flex-direction: row-reverse;
+
+  width: calc(100% - 64px);
+
+  padding: 40px 30px;
+  margin-top: 32px;
+
+  background: #181F33;
+  border-radius: 10px;
+
+  display: flex;
+}
+
+.numberText {
+  font-size: 56px;
+  line-height: 52px;
+  text-align: right;
+  letter-spacing: -0.933333px;
+}
