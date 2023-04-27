@@ -1,4 +1,5 @@
 import { Button } from "./structs";
+import bigDecimal from 'js-big-decimal';
 
 export const Buttons: Button[] = [
     {
@@ -88,8 +89,8 @@ export const Buttons: Button[] = [
     {
         text: ".",
         handler: (curr, setCurr) => {
-            if (curr.trim().length !== 0 && curr.toString().indexOf(",") == -1) {
-                setCurr(curr + ",")
+            if (curr.trim().length !== 0 && curr.toString().indexOf(".") == -1) {
+                setCurr(curr + ".")
             }
         }
     },
@@ -132,24 +133,24 @@ export const Buttons: Button[] = [
         text: "=",
         handler: (curr, setCurr, cached, setCached, method, setMethod) => {
             if (method !== undefined && curr.trim().length !== 0 && cached.trim().length !== 0) {
-                let newNumber: number = 0;
+                let newNumber: bigDecimal;
 
                 switch (method) {
                     case "+":
-                        newNumber = Number(curr) + Number(cached);
+                        newNumber = new bigDecimal(curr).add(new bigDecimal(cached));
                         break;
                     case "-":
-                        newNumber = Number(curr) - Number(cached);
+                        newNumber = new bigDecimal(curr).subtract(new bigDecimal(cached));
                         break;
                     case "x":
-                        newNumber = Number(curr) * Number(cached);
+                        newNumber = new bigDecimal(curr).multiply(new bigDecimal(cached));
                         break;
                     case "/":
-                        newNumber = Number(curr) / Number(cached);
+                        newNumber = new bigDecimal(curr).divide(new bigDecimal(cached), 8);
                         break;
                 }
 
-                setCurr(newNumber.toString())
+                setCurr(newNumber.getValue())
                 setCached("")
                 setMethod(undefined)
             }
