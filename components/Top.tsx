@@ -9,7 +9,7 @@ interface Props {
 
 export default function Top({theme, setTheme}: Props) {
     return <div className={`${styles.top} ${styles[themeNames[theme]]}`}>
-        <span className={styles.calc}>calc</span>
+        <h1 className={styles.calc}>calc</h1>
         <span className={styles.theme}>theme</span>
 
         <div className={styles.selectorHolder}>
