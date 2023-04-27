@@ -33,16 +33,32 @@
     line-height: 37px;
     letter-spacing: -0.666667px;
     color: #434A59;
+
+    cursor: pointer;
+
+    --hover-box-shadow: #B3A497;
+    --hover-background: #FFFFFE;
 }
 
 .button.red {
     background: #D03F2F;
     box-shadow: inset 0px -4px 0px #93261A;
     color: #FFFFFF;
+
+    --hover-background: #F96B5B;
+    --hover-box-shadow: #93261A;
 }
 
 .button.action {
     background: #647198;
     box-shadow: inset 0px -4px 0px #414E73;
     color: #FFFFFF;
+
+    --hover-background: #A2B2E1;
+    --hover-box-shadow: inset 0px -4px 0px #414E73;
+}
+
+.button:hover {
+    background: var(--hover-background);
+    box-shadow: inset 0px -4px 0px var(--hover-box-shadow);
 }
