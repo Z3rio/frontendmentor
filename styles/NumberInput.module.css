@@ -1,0 +1,48 @@
+.main {
+    margin-top: 24px;
+
+    width: calc(100% - 64px);
+
+    padding: 32px;
+
+    background: #242D44;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    row-gap: 24px;
+}
+
+.button {
+    width: calc(25% - 18px);
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #EAE3DC;
+    box-shadow: inset 0px -4px 0px #B3A497;
+    border-radius: 10px;
+
+    font-size: 40px;
+    line-height: 37px;
+    letter-spacing: -0.666667px;
+    color: #434A59;
+}
+
+.button.red {
+    background: #D03F2F;
+    box-shadow: inset 0px -4px 0px #93261A;
+    color: #FFFFFF;
+}
+
+.button.action {
+    background: #647198;
+    box-shadow: inset 0px -4px 0px #414E73;
+    color: #FFFFFF;
+}
