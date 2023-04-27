@@ -11,8 +11,9 @@ const leagueSpartan = League_Spartan({ weight: "700", subsets: ["latin"] })
 const nf = new Intl.NumberFormat();
 
 export default function Home() {
-  const [number, setNumber] = useState<number>(0);
-  const [cachedNumber, setCachedNumber] = useState<number>(0);
+  const [number, setNumber] = useState<string>("");
+  const [cachedNumber, setCachedNumber] = useState<string>("");
+  const [method, setMethod] = useState<undefined | "+" | "-" | "/" | "x">(undefined);
 
   return (
     <>
@@ -26,7 +27,7 @@ export default function Home() {
         <Top />
 
         <div className={styles.numberHolder}>
-          <span className={styles.numberText}>{nf.format(number)}</span>
+          <span className={styles.numberText}>{number !== "" ? number : "0"}</span>
         </div>
 
         <NumberInput 
@@ -34,6 +35,8 @@ export default function Home() {
           setNumber={setNumber} 
           cachedNumber={cachedNumber} 
           setCachedNumber={setCachedNumber}
+          method={method}
+          setMethod={setMethod}
         />
       </main>
     </>

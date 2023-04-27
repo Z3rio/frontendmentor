@@ -4,19 +4,21 @@ import styles from '@styles/NumberInput.module.css'
 import { Dispatch, SetStateAction } from 'react';
 
 interface Props {
-    number: number;
-    setNumber: Dispatch<SetStateAction<number>>;
-    cachedNumber: number;
-    setCachedNumber: Dispatch<SetStateAction<number>>;
+    number: string;
+    setNumber: Dispatch<SetStateAction<string>>;
+    cachedNumber: string;
+    setCachedNumber: Dispatch<SetStateAction<string>>;
+    method: undefined | "+" | "-" | "/" | "x";
+    setMethod: Dispatch<SetStateAction<undefined | "+" | "-" | "/" | "x">>;
 }
 
-export default function NumberInput({number, setNumber, cachedNumber, setCachedNumber}: Props) {
+export default function NumberInput({number, setNumber, cachedNumber, setCachedNumber, method, setMethod}: Props) {
     return <div className={styles.main}>
         {Buttons.map((btn: Button, idx: number) => {
             return <div 
                 key={idx} 
                 onClick={() => {
-                    btn.handler(number, setNumber, cachedNumber, setCachedNumber);
+                    btn.handler(number, setNumber, cachedNumber, setCachedNumber, method, setMethod);
                 }}
                 className={`${styles.button}${btn.customClass !== undefined ? " " + styles[btn.customClass] : ""}`}
                 style={btn.customStyle !== undefined ? btn.customStyle : {}}
