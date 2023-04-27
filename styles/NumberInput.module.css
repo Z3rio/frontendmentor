@@ -40,6 +40,14 @@
     --hover-background: #FFFFFE;
 }
 
+.button.half {
+    width: calc(50% - 12px);
+}
+
+.button.small {
+    font-size: 28px;
+}
+
 .button.red {
     background: #D03F2F;
     box-shadow: inset 0px -4px 0px #93261A;
@@ -61,4 +69,24 @@
 .button:hover {
     background: var(--hover-background);
     box-shadow: inset 0px -4px 0px var(--hover-box-shadow);
+}
+
+@media screen and (max-width: 500px) {
+    .main {
+        row-gap: 9px;
+    }
+
+    .button {
+        width: calc(25% - 9px);
+
+        font-size: 32px;
+    }
+
+    .button.small {
+        font-size: 20px;
+    }
+
+    .button.half {
+        width: calc(50% - 4.5px);
+    }
 }

@@ -11,5 +11,5 @@ export interface Button {
         updateMethod: Dispatch<SetStateAction<undefined | "+" | "-" | "/" | "x">>
     ) => void;
     customStyle?: Record<string, string>;
-    customClass?: string;
+    customClass?: string | string[];
 }

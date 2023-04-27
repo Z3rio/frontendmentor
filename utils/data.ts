@@ -24,10 +24,7 @@ export const Buttons: Button[] = [
         handler: (curr, setCurr, cached, setCached) => {
             setCurr("");
         },
-        customClass: "action",
-        customStyle: {
-            fontSize: "28px"
-        }
+        customClass: ["action", "small"]
     },
     
     {
@@ -129,11 +126,7 @@ export const Buttons: Button[] = [
             setCurr("");
             setCached("");
         },
-        customStyle: {
-            width: "calc(50% - 12px)",
-            fontSize: "28px"
-        },
-        customClass: "action"
+        customClass: ["action", "small", "half"]
     },
     {
         text: "=",
@@ -161,10 +154,6 @@ export const Buttons: Button[] = [
                 setMethod(undefined)
             }
         },
-        customStyle: {
-            width: "calc(50% - 12px)",
-            fontSize: "28px"
-        },
-        customClass: "red"
+        customClass: ["red", "small", "half"]
     },
 ]
