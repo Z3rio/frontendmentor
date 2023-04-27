@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+
+  background: #3A4663;
+  color: #fff;
+}
+
+body,
+#__next {
+  width: 100vw;
+  height: 100vh;
+}
+
+#__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
