@@ -39,7 +39,7 @@ export default function PreviewCard({category, header, description, price, disco
                 <h3 className={`${styles.price} ${fraunces.className}`}>${price}</h3>
             </div>
 
-            <button className={`${styles.cartButton} ${montserrat2.className}`}><Image src="/icon-cart.svg" alt="Shopping cart image" width={14.39} height={16} className={styles.btnImage} />Add to cart</button>
+            <button className={`${styles.cartButton} ${montserrat2.className}`}><Image src="/icon-cart.svg" alt="Shopping cart image" width={14} height={16} className={styles.btnImage} />Add to cart</button>
         </div>
     </div>
 }
